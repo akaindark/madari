@@ -1,2 +1,207 @@
+@import 'fonts';
 @import 'vars';
 @import 'global';
+
+
+/* ========Header======== */
+
+.header{
+  background-color: $bg;
+  &__inner{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__logo-link{
+    @include logo;
+    font-size: 24px;
+    color: $whiteText;
+  }
+  &__menu-btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    &:hover,
+    &:focus{
+      opacity: 0.6;
+    }
+    div{
+      width: 20px;
+      height: 2px;
+      background-color: $whiteText;
+      margin: 2px 0px;
+      opacity: 1;
+    }
+  }
+}
+.menu{
+  background-color: rgba(114, 81, 194, 0.95);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all 1s;
+}
+.active{
+  left: 0;
+}
+.container-menu{
+  position: relative;
+}
+.close-btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 55px;
+  cursor: pointer;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-color: $white;
+    top: 18px;
+  }
+  &::before{
+    transform: rotate(-45deg);
+  }
+  &::after{
+    transform: rotate(45deg);
+  }
+  &:hover,
+  &:focus{
+    &::before,
+    &::after{
+      opacity: 0.6;
+    }
+  }
+}
+.menu__list{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.header__link{
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 700;
+  color: $white;
+  padding: 30px 25px 14px 0px;
+  border-bottom: 3px solid $white;
+  max-width: 398px;
+  width: 100%;
+  transition: all .4s;
+  &:hover,
+  &:focus{
+    opacity: .5;
+    color: $red;
+    transform: scale(1.2);
+    margin-left: 38px;
+  }
+}
+
+/* ========Intro======== */
+
+.intro{
+  background-color: $bg;
+  padding: 74px 0px 124px;
+  position: relative;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 650px;
+    margin-top: 54px;
+  }
+  &__title{
+    @include montserrat400;
+    font-size: 50px;
+    line-height: 79px;
+    color: $whiteText;
+    margin-bottom: 30px;
+    span{
+      font-size: 24px;
+      line-height: 79px;
+      font-weight: 600;
+      letter-spacing: 0.6em;
+      display: block;
+    }
+  }
+}
+.btn{
+  width: 180px;
+  height: 60px;
+  border-radius: 30.0px;
+  border: 1px solid $white;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $whiteText;
+  transition: all .5s;
+  &:hover,
+  &:focus{
+    background-color: $gold;
+    border: none;
+  }
+  &:active{
+    background-color: $red;
+  }
+}
+.intro__btn-downlad{
+  background-color: $gold;
+  margin-right: 26px;
+  border: none;
+}
+.intro__img{
+  width: 257px;
+  height: 404px;
+  background-color: #919191;
+  margin-right: 36px;
+}
+
+/* ========statistic======== */
+
+.statistic{
+  max-width: 900px;
+  width: 100%;
+  position: absolute;
+  background-color: $white;
+  box-shadow: 0px 5px 21px 4px rgba(69,134,255,0.1);
+  left: 50%;
+  bottom: -80px;
+  transform: translate(-50%);
+}
+.statistic__list{
+  display: flex;
+  align-items: center;
+  height: 140px;
+}
+.statistic__item{
+  font-size: 24px;
+  color: $text;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  & + &::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 81px;
+    opacity: 0.2;
+    background-color: #7251c2;
+    left: 0;
+    bottom: -32px;
+  }
+}

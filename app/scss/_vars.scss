@@ -34,3 +34,36 @@ $red: #ff0000;
   font-weight: 400;
 }
 
+@mixin title {
+  @include montserrat400;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  position: relative;
+  text-align: center;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/src/title-figure.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 15px;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@mixin btn {
+  transition: all .5s;
+  &:hover,
+  &:focus{
+    background-color: $gold;
+    border: none;
+  }
+  &:active{
+    background-color: $red;
+  }
+}

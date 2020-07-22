@@ -49,6 +49,7 @@
   left: -100%;
   width: 100%;
   transition: all 1s;
+  z-index: 2;
 }
 .active{
   left: 0;
@@ -164,14 +165,14 @@
   margin-right: 26px;
   border: none;
 }
-.intro__img{
+.intro__images{
   width: 257px;
   height: 404px;
   background-color: #919191;
   margin-right: 36px;
 }
 
-/* ========statistic======== */
+/* ========Statistic======== */
 
 .statistic{
   max-width: 900px;
@@ -205,3 +206,116 @@
     bottom: -32px;
   }
 }
+
+/* ========About======== */
+
+.about{
+  padding-top: 188px;
+}
+.about__inner{
+  display: flex;
+  justify-content: center;
+}
+.about__title{
+  @include title;
+  color: $bg;
+  margin-bottom: 45px;
+}
+.about__images{
+  width: 317px;
+  height: 478px;
+  background-color: #919191;
+  margin-left: auto;
+}
+.about__content{
+  max-width: 570px;
+  margin-left: 150px;
+  margin-top: 34px;
+}
+.about__subtitle{
+  max-width: 348px;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  margin-bottom: 40px;
+  span{
+    color: $bg;
+  }
+}
+.about__text{
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.025em;
+  margin-bottom: 30px;
+}
+.about-btn{
+  width: 200px;
+  height: 65px;
+  border-radius: 32.5px;
+  font-weight: 700;
+  @include btn;
+  margin-top: 20px;
+}
+.android{
+  background-color: $gold;
+  color: $white;
+  margin-right: 26px;
+}
+.apple{
+  color: $bg;
+  border: 1px solid $bg;
+  &:hover,
+  &:focus{
+    color: $white;
+  }
+}
+
+/* ========FEATURES======== */
+
+.features{
+  padding: 100px 0px;
+  background-color: $bg;
+  color: $white;
+}
+.features__title{
+  @include title;
+  color: $white;
+  margin-bottom: 78px;
+}
+.features__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.features__images{
+  width: 261px;
+  height: 505px;
+  background-color: #919191;
+}
+.features__content{
+  margin-top: 36px;
+}
+.features__item{
+  display: flex;
+  & + & {
+    margin-top: 100px;
+  }
+}
+.features__descr{
+  width: 275px;
+}
+.features__subtitle{
+  @include montserrat400;
+  font-size: 24px;
+  letter-spacing: 0.025em;
+  margin-bottom: 24px;
+}
+.features__img{
+  width: 55px;
+  height: 55px;
+  background-color: $white;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+/* ========Service======== */

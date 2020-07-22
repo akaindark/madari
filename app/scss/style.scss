@@ -319,3 +319,50 @@
 }
 
 /* ========Service======== */
+
+.service{
+  padding: 100px 0px;
+}
+.service__title{
+  @include title;
+  color: $bg;
+  margin-bottom: 80px;
+}
+.service__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.service__item{
+  padding: 50px 40px;
+  text-align: center;
+  background-color: $whiteText;
+  transition: all .5s;
+  &:hover,
+  &:active{
+    background-color: $bg;
+    color: $white;
+    .service__img{
+      border-color: $white;
+    }
+  }
+  &--active{
+    background-color: $bg;
+    color: $white;
+    .service__img{
+      border-color: $white;
+    }
+  }
+}
+.service__img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid $bg;
+  margin: 0px auto 30px;
+}
+.service__subtitle{
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
